@@ -1,0 +1,11 @@
+{
+  "name": "winrpi",
+  "version": "1.0.0",
+  "description": "managing home appliance with windows service for raspberry pi 3",
+  "main": "app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,10 @@
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\bin\Debug\MS.Smarthome.Client.exe.config
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\bin\Debug\MS.Smarthome.Client.exe
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\bin\Debug\MS.Smarthome.Client.pdb
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\bin\Debug\Newtonsoft.Json.dll
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\bin\Debug\Newtonsoft.Json.xml
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\obj\Debug\MS.Smarthome.Client.csprojResolveAssemblyReference.cache
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\obj\Debug\MS.Smarthome.Client.exe
+\\Mayank-pc\k\Project\winrpi\MS.Smarthome\MS.Smarthome.Client\obj\Debug\MS.Smarthome.Client.pdb

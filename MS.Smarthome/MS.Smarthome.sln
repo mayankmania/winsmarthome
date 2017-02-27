@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Smarthome.Client", "MS.Smarthome.Client\MS.Smarthome.Client.csproj", "{A6A02483-C5CC-4002-AFE5-24DBF9A6E8C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Smarthome.RPIService", "MS.Smarthome.RPIService\MS.Smarthome.RPIService.csproj", "{CBE76D7F-6336-474E-A452-10799E9A93CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Smarthome.RPIService.Tests", "MS.Smarthome.RPIService.Tests\MS.Smarthome.RPIService.Tests.csproj", "{FBE8A1EF-C8CC-41F3-A475-251FB1E76628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Smarthome.Model", "MS.Smarthome.Model\MS.Smarthome.Model.csproj", "{4CC6FFF5-5E0F-4116-85A6-9A4F6CD8B771}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6A02483-C5CC-4002-AFE5-24DBF9A6E8C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A02483-C5CC-4002-AFE5-24DBF9A6E8C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A02483-C5CC-4002-AFE5-24DBF9A6E8C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A02483-C5CC-4002-AFE5-24DBF9A6E8C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE76D7F-6336-474E-A452-10799E9A93CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE76D7F-6336-474E-A452-10799E9A93CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE76D7F-6336-474E-A452-10799E9A93CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE76D7F-6336-474E-A452-10799E9A93CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE8A1EF-C8CC-41F3-A475-251FB1E76628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE8A1EF-C8CC-41F3-A475-251FB1E76628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE8A1EF-C8CC-41F3-A475-251FB1E76628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE8A1EF-C8CC-41F3-A475-251FB1E76628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CC6FFF5-5E0F-4116-85A6-9A4F6CD8B771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC6FFF5-5E0F-4116-85A6-9A4F6CD8B771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC6FFF5-5E0F-4116-85A6-9A4F6CD8B771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC6FFF5-5E0F-4116-85A6-9A4F6CD8B771}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
