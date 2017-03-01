@@ -82,6 +82,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MS.Smarthome.Model\MS.Smarthome.Model.csproj">
+      <Project>{4cc6fff5-5e0f-4116-85a6-9a4f6cd8b771}</Project>
+      <Name>MS.Smarthome.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

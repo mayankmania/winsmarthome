@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNet.SignalR;
-using MS.Smarthome.RPIService.Models;
-using System.Collections.Generic;
+using Microsoft.AspNet.SignalR.Hubs;
+using MS.Smarthome.Model;
+using System.Diagnostics;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace MS.Smarthome.RPIService
 {
+    [HubName("rpiHub")]
     public class RPIHub : Hub
     {
         public RPIHub()
@@ -18,15 +21,16 @@ namespace MS.Smarthome.RPIService
             return base.OnConnected();
         }
 
-        public void OperationProcessed(DeviceDetail deviceDetail)
+        public void OperationProcessed(DeviceOperationWrapper deviceOperationWrapper)
         {
-            switch (deviceDetail.Operation.OperationType)
+            File.WriteAllText("File.txt","OperationProcessed Invoked");
+            switch (deviceOperationWrapper.Operation.OperationType)
             {
                 case OperationType.GET:
-                    Clients.Group(deviceDetail.Operation.RaspId).deviceListFetched(deviceDetail.Devices);
+                    Clients.Group(deviceOperationWrapper.Operation.RaspId).deviceListFetched(deviceOperationWrapper.Devices);
                     break;
                 case OperationType.POST:
-                    Clients.Group(deviceDetail.Operation.RaspId).onDeviceUpdated(deviceDetail.Devices);
+                    Clients.Group(deviceOperationWrapper.Operation.RaspId).onDeviceUpdated(deviceOperationWrapper.Devices);
                     break;
                 default:
                     break;
