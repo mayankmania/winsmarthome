@@ -30,7 +30,7 @@ namespace MS.Smarthome.RPIService
                     Clients.Group(deviceOperationWrapper.Operation.RaspId).deviceListFetched(deviceOperationWrapper.Devices);
                     break;
                 case OperationType.POST:
-                    Clients.Group(deviceOperationWrapper.Operation.RaspId).onDeviceUpdated(deviceOperationWrapper.Devices);
+                    Clients.Group(deviceOperationWrapper.Operation.RaspId).deviceUpdated(deviceOperationWrapper.Devices);
                     break;
                 default:
                     break;
