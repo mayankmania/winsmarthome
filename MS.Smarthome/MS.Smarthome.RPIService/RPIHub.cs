@@ -23,14 +23,13 @@ namespace MS.Smarthome.RPIService
 
         public void OperationProcessed(DeviceOperationWrapper deviceOperationWrapper)
         {
-            File.WriteAllText("File.txt","OperationProcessed Invoked");
             switch (deviceOperationWrapper.Operation.OperationType)
             {
                 case OperationType.GET:
                     Clients.Group(deviceOperationWrapper.Operation.RaspId).deviceListFetched(deviceOperationWrapper.Devices);
                     break;
                 case OperationType.POST:
-                    Clients.Group(deviceOperationWrapper.Operation.RaspId).deviceUpdated(deviceOperationWrapper.Devices);
+                    Clients.Group(deviceOperationWrapper.Operation.RaspId).deviceUpdated(deviceOperationWrapper.Devices[0]);
                     break;
                 default:
                     break;
@@ -39,9 +38,12 @@ namespace MS.Smarthome.RPIService
 
         public void GetDevices()
         {
-            var operation = new Operation();
-            operation.RaspId = "1";
-            operation.OperationType = OperationType.GET;
+            var operation = new Operation()
+            {
+                RaspId = "1",
+                OperationType = OperationType.GET
+            };
+
             Clients.Group(operation.RaspId).processRecord(operation);
         }
 

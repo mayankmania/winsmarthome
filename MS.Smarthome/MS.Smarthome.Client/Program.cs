@@ -44,15 +44,6 @@ namespace MS.Smarthome.Client
             }
 
             return new DeviceOperationWrapper { Devices = deviceDetails, Operation = operation };
-
-            //socket.emit('operationProcessed',
-            // {
-            //    'deviceId': operation.deviceId,
-            //'description': operation.description,
-            //'deviceDetails': deviceDetails,
-            //'status': 'success',
-            //'raspId': operation.raspId
-            // });
         }
 
         public static List<Device> GetRegisteredDevices()
@@ -71,7 +62,7 @@ namespace MS.Smarthome.Client
 
         public static List<Device> GetDeviceDetails(string deviceId)
         {
-            return GetRegisteredDevices().Where(c => c.DeviceId == deviceId).ToList();
+            return GetRegisteredDevices().Where(c => c.DeviceId == deviceId).Select(c => new Device { Description = c.Description, Status = true, DeviceId = c.DeviceId }).ToList();
         }
     }
 }

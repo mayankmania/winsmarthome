@@ -3,10 +3,11 @@ var rpiHubProxy = connection.createHubProxy('rpiHub');
 rpiHubProxy.on('deviceListFetched', function (result) {
     console.log(result);
     for (var i = 0; i < result.length; i++) {
-        $("table tbody").append("<tr><th scope='row'>" + (i + 1) + "</th><td><img src='css/icons/" + result[i].device + ".png'" + " class='thumbnail' alt='...'></td><td><a href='javascript:void(0);' onclick='manageDevice(" + result[i].deviceId + ")'><img class='thumbnail' src='/css/icons/stop.png' id='device" + result[i].deviceId + "'/> </a></td></tr>");
+        $("table tbody").append("<tr><th scope='row'>" + (i + 1) + "</th><td><img src='css/icons/" + result[i].description + ".png'" + " class='thumbnail' alt='...'></td><td><a href='javascript:void(0);' onclick='manageDevice(" + result[i].deviceId + ")'><img class='thumbnail' src='/css/icons/stop.png' id='device" + result[i].deviceId + "'/> </a></td></tr>");
         setStateIcon(result[i]);
     }
 });
+
 rpiHubProxy.on('deviceUpdated', function (result) {
     setStateIcon(result);
 });
