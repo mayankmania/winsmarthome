@@ -17,7 +17,7 @@ namespace MS.Smarthome.RPIService
 
         public override Task OnConnected()
         {
-            Groups.Add(Context.ConnectionId, "1");
+            Groups.Add(Context.ConnectionId, Context.QueryString["raspId"]);
             return base.OnConnected();
         }
 
@@ -40,7 +40,7 @@ namespace MS.Smarthome.RPIService
         {
             var operation = new Operation()
             {
-                RaspId = "1",
+                RaspId = Context.QueryString["raspId"],
                 OperationType = OperationType.GET
             };
 
@@ -49,7 +49,7 @@ namespace MS.Smarthome.RPIService
 
         public void PerformOperation(Operation operation)
         {
-            operation.RaspId = "1";
+            operation.RaspId = Context.QueryString["raspId"];
             operation.OperationType = OperationType.POST;
             Clients.Group(operation.RaspId).processRecord(operation);
         }

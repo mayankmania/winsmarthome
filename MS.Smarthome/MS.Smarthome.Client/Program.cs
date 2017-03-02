@@ -3,6 +3,7 @@ using MS.Smarthome.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 
 namespace MS.Smarthome.Client
 {
@@ -10,20 +11,21 @@ namespace MS.Smarthome.Client
     {
         static void Main(string[] args)
         {
-            var hubConnection = new HubConnection("http://localhost:49348/");
-            IHubProxy rpihubProxy = hubConnection.CreateHubProxy("rpiHub");
-            hubConnection.Headers.Add("raspId", "1");
+            var macAddr =
+    (
+        from nic in NetworkInterface.GetAllNetworkInterfaces()
+        where nic.OperationalStatus == OperationalStatus.Up
+        select nic.GetPhysicalAddress().ToString()
+    ).FirstOrDefault();
 
+            var hubConnection = new HubConnection("http://localhost:49348/", "raspId=" + macAddr);
+            IHubProxy rpihubProxy = hubConnection.CreateHubProxy("rpiHub");
             rpihubProxy.On<Operation>("ProcessRecord", operation =>
             {
                 var deviceOperation = PerformOperation(operation);
                 rpihubProxy.Invoke<DeviceOperationWrapper>("OperationProcessed", deviceOperation);
             });
-
             hubConnection.Start().Wait();
-
-            rpihubProxy.Invoke<Operation>("PerformOperation", new Operation { DeviceId = "1", OperationType = OperationType.GET });
-
             Console.ReadLine();
         }
 
