@@ -2,3 +2,7 @@ D:\staging\winsmarthome\MS.Smarthome\MS.Smarthome.Model\bin\Debug\MS.Smarthome.M
 D:\staging\winsmarthome\MS.Smarthome\MS.Smarthome.Model\bin\Debug\MS.Smarthome.Model.pdb
 D:\staging\winsmarthome\MS.Smarthome\MS.Smarthome.Model\obj\Debug\MS.Smarthome.Model.dll
 D:\staging\winsmarthome\MS.Smarthome\MS.Smarthome.Model\obj\Debug\MS.Smarthome.Model.pdb
+\\Mayank-pc\k\Project\winsmarthome\MS.Smarthome\MS.Smarthome.Model\bin\Debug\MS.Smarthome.Model.dll
+\\Mayank-pc\k\Project\winsmarthome\MS.Smarthome\MS.Smarthome.Model\bin\Debug\MS.Smarthome.Model.pdb
+\\Mayank-pc\k\Project\winsmarthome\MS.Smarthome\MS.Smarthome.Model\obj\Debug\MS.Smarthome.Model.dll
+\\Mayank-pc\k\Project\winsmarthome\MS.Smarthome\MS.Smarthome.Model\obj\Debug\MS.Smarthome.Model.pdb
